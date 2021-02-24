@@ -216,6 +216,7 @@ func getDbCreateSQL(al *alias) (sqls []string, tableIndexes map[string][]dbIndex
 				engine = al.Engine
 			}
 			sql += " ENGINE=" + engine
+			sql += " DEFAULT CHARSET=utf8"
 		}
 
 		sql += ";"
